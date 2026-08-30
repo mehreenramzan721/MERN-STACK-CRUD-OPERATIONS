@@ -10,6 +10,8 @@ function Users(){
     return(
         <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
             <div className='w-50 bg-white rounded p-3'>
+                <Link to="/create" className="btn btn-success mb-3">Add +</Link>
+
                 <table className="table">
                     <thead>
                         <tr>
@@ -29,9 +31,10 @@ function Users(){
                                         <td>{users.Email}</td>
                                         <td>{users.Age}</td>
                                         <td>
-                                            <button><Link to="/update" className="btn btn-succcess">Update</Link></button>
-                                            {/* <button>Edit</button> */}
-                                            <button>Delete</button>
+                                            <td>
+                                                <Link to="/update" className="btn btn-success me-2">Update</Link>
+                                                <button className="btn btn-outline-dark">Delete</button>
+                                            </td>   
                                         </td>
                                     </tr>
                                 )

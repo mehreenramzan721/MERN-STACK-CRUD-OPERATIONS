@@ -7,11 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post('./createUser',(req,res)=>{
+app.post('/createUser',(req,res)=>{
     UserModel.create(req.body)
     .then(users=>res.json(users))
     .catch(err=>res.json(err))
 })
 
-mongoose.connect('mongodb://127.0.0.1:27017/crud')
+mongoose.connect('mongodb+srv://testinguser:86SCMKSE0rGRHOL7@cluster0.pehbkav.mongodb.net/?appName=Cluster0')
 app.listen(3001, ()=> {console.log(`Server is running at port 3001`)})
