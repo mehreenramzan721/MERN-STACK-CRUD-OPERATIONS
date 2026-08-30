@@ -10,7 +10,7 @@ function CreateUser(){
 
     const Submit = (e) =>{
         e.preventDefault();
-        axios.post("http://localhost:3001/createUser",{name,email,age})
+        axios.post("https://redesigned-memory-5g74rx96g6r537w56-3001.app.github.dev/createUser", {name,email,age})
         .then(result => console.log(result))
         .catch(err => console.log(err))
     }
