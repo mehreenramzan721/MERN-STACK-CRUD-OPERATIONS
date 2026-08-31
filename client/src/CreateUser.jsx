@@ -3,15 +3,20 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function CreateUser(){
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
-    const [age, setAge] = useState()
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [age, setAge] = useState('')
     const navigate = useNavigate()
 
     const Submit = (e) =>{
         e.preventDefault();
-        axios.post("https://redesigned-memory-5g74rx96g6r537w56-3001.app.github.dev/createUser", {name,email,age})
-        .then(result => console.log(result))
+        axios.post("https://silver-broccoli-g4v5r7p94g9jfw9qx-3001.app.github.dev/createUser", {name,email,age})
+        .then(result => 
+            {
+                console.log(result)
+                navigate('/')
+
+    })
         .catch(err => console.log(err))
     }
         return(
